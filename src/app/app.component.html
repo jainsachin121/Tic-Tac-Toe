@@ -1,0 +1,24 @@
+<div class="container">{{title}}
+    <div class="row">
+  <div class="col-md-8">
+    <mat-grid-list class="tick-tack-grid" cols="3" rowHeight="2:1">
+      <mat-grid-tile *ngFor = "let block of gs.blocks; let i = index; trackBy: trackByFn" (click) = "playerClick(i)">
+        <i [class] ="block.symbol == 'X' ? 'X' : 'O'">
+          {{block.symbol}}
+        </i>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="col-md-4">
+    <h3> Score </h3>
+    <h4> Player "X" :  {{(winner == "X") ? "Won" : ""}}</h4>
+    <h4> Player "O" :  {{(winner == "O") ? "Won" : ""}}</h4>
+  </div>
+  </div>
+  <div class="row"> 
+    <div class="status">{{status}}</div>
+  </div>
+  <div class="row"> 
+      <button mat-raised-button color="primary" (click)="newGame()">New Game</button>
+  </div>
+</div>
