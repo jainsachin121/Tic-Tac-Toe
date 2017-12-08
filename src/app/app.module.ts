@@ -3,7 +3,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { GameService} from '../app/game.service'
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 import { AppComponent } from './app.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
@@ -17,8 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     NoopAnimationsModule,
     MatGridListModule,
-    MatButtonModule,
-    MDBBootstrapModule.forRoot()
+    MatButtonModule
   ],
   providers: [GameService],
   exports: [MatGridListModule, MatButtonModule],
